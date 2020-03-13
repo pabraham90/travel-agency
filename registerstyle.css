@@ -81,7 +81,7 @@ align-items: flex-start;
 
 .button:hover {
     background-color: rgb(53, 47, 82);
-    color: white;
+    color: yellow;
 }
 
 

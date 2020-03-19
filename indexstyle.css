@@ -56,6 +56,24 @@
     .btn:hover {
       background-color: black; }
   
+
+   .btn2 {
+        background-color: #555;
+        color: azure;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        
+      }
+
+    .btn2:hover {
+      background-color: black;
+
+    }
+
+
+
   .sec3 {
     display: flex;
     flex-direction: row;
@@ -76,6 +94,7 @@
  }
 
 
+ /*
  .iteme {
 
   cursor: pointer;

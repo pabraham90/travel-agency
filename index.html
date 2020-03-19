@@ -60,24 +60,35 @@
         picText[3] = "Jamaica";
     </script>
 
-</script>
+    </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
 
-        $('div.container').fadeIn(2000);
-        $('div.container-grid').fadeIn(3000);
+            $('div.container').fadeIn(2000);
+            $('div.container-grid').fadeIn(3000);
 
-    });
+        });
 
-</script>
+    </script>
+    <script>
 
+        function passvalues() {
+            let country = document.getElementById("countrytext").value;
+            localStorage.setItem("listvalue", country);
+            return false;
+
+        }
+
+    </script>
 
 </head>
 
 
-<body style="background-image: url(https://i.ytimg.com/vi/nZSC3Zpe-Qw/maxresdefault.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;" width=100px>
+<body
+    style="background-image: url(https://i.ytimg.com/vi/nZSC3Zpe-Qw/maxresdefault.jpg);background-position: center;background-repeat: no-repeat;background-size: cover;"
+    width=100px>
 
     <!-- Top navigation -->
     <div class="topnav">
@@ -89,7 +100,8 @@
 
         <!-- Left-aligned links (default) -->
         <div class="logo">
-            <img src="http://www.runawayguide.com/wp-content/uploads/2014/01/world-travel-experts-list.jpg" width="80px" padding-left= "40px">
+            <img src="http://www.runawayguide.com/wp-content/uploads/2014/01/world-travel-experts-list.jpg" width="80px"
+                padding-left="40px">
         </div>
 
         <!-- Right-aligned links -->
@@ -103,49 +115,53 @@
     </div>
 
 
-    <div class="container" style="display:none;">
+    <div class="container" style="display:hidden;">
         <div class=image>
-            <img id="img" src="https://images.unsplash.com/photo-1433190152045-5a94184895da?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8fd4ff7d204d5f692b984eb52c9f235c&w=1000&q=80"
+            <img id="img"
+                src="https://images.unsplash.com/photo-1433190152045-5a94184895da?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8fd4ff7d204d5f692b984eb52c9f235c&w=1000&q=80"
                 alt="Travel pic" style="height: 550px; width: 80%;">
 
-                <div class="centered" id="imgText">Maldives</div>
+            <div class="centered" id="imgText">Maldives</div>
 
             <button class="btn" onclick="window.location.href = 'travelpackages.html';">Explore Some More!</button>
 
 
         </div>
-        
+
     </div>
 
-    
+
 
     <!-- where to go section-->
+    <form action="Destinations_group2.html">
+        <div class="container-grid" style="display:hidden;">
+            <div class="itema">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Where To Go!</h4>
+            </div>
 
-    <div class="container-grid" style="display:none;">
-        <div class="itema">
-            <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Where To Go!</h4>
+            <div class="itemb"><input type="text" ; name="Wheretogo" placeholder="Where To Go" width="20s">
+            </div>
+
+            <div class="itemc"><input type="date" maxlength="4" name="datedeparture" required></div>
+            <div class="itemd"> 
+
+                <input list="countries" id="countrytext" style=width:30; placeholder="Travel Places" required>
+                <datalist id="countries">""
+                    <option value="Canada">
+                    <option value="USA">
+                    <option value="Asia">
+                    <option value="Dominican Republic">
+                    <option value="Jamaica">
+                </datalist>
+
+            </div>
+           <!-- <div class="iteme"> --> <button class = "btn2" onclick="passvalues();">Submit</button>
+                <a href="skyimages.jpg"></a>
+
+           <!-- </div> -->
         </div>
 
-        <div class="itemb"><input type="text" ; name="Wheretogo" placeholder="Where To Go" width="20s" required></div>
-
-        <div class="itemc"><input type="date" maxlength="4" name="datedeparture" required></div>
-        <div class="itemd">
-
-            <input list="countries" style=width:30; placeholder="Travel Places" required>
-            <datalist id="countries">""
-                <option value="Canada">
-                <option value="USA">
-                <option value="Asia">
-                <option value="Dominican Republic">
-                <option value="Jamaica">
-            </datalist>
-
-        </div>
-        <div class="iteme"><input type="button" value="submit">
-            <a href="skyimages.jpg"></a>
-
-        </div>
-    </div>
+    </form>
     <!--end of where to go section-->
 
     <br><br><br><br><br><br><br>

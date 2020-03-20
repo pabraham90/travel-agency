@@ -146,10 +146,101 @@
   }*/
   </style>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <meta charset="utf-8" />
+  <script>
+    /*
+  let dest = localStorage.getItem("listvalue");
+    $(window).load(function () {
+
+      $(".d1, .d2, .d3, .d4, .d5, .d6, .d7, .d8, .d9, .d10").hide();
+      if ($('#dest').val() == "Canada") {
+        $("#d1").show();
+      } else if ($('#dest').val() == "USA") {
+        $("#d9").show();
+      } else if ($('#dest').val() == "Dominican Republic") {
+        $("#d3").show();
+      } else if ($('#dest').val() == "Jamaica") {
+        $("#d4").show();
+      } else if ($('#dest').val() == "Asia") {
+        $("#d4").show();
+      }
+
+    });
+*/
+  </script>
+ 
+ <script>
+
+  function destChoose() {
+    let dest = localStorage.getItem("listvalue");
+    console.log(dest);
+    
+   if (dest == "Canada") { 
+      document.getElementById("d1").style.display='block';
+      document.getElementById("d2").style.display='block';
+    } 
+
+    else {
+      document.getElementById("d1").style.display='none'
+      document.getElementById("d2").style.display='none';
+    }
+
+    if (dest == "Europe") { 
+      document.getElementById("d7").style.display='block';
+      document.getElementById("d8").style.display='block';
+    } 
+
+    else {
+      document.getElementById("d7").style.display='none'
+      document.getElementById("d8").style.display='none';
+    }
+
+    if (dest == "USA") { 
+      document.getElementById("d9").style.display='block';
+      document.getElementById("d10").style.display='block';
+    } 
+
+    else {
+      document.getElementById("d9").style.display='none'
+      document.getElementById("d10").style.display='none';
+    }
+
+    if (dest == "Dominican Republic") { 
+      document.getElementById("d3").style.display='block';
+    } 
+
+    else {
+      document.getElementById("d3").style.display='none';
+      
+    }
+
+    if (dest == "Jamaica") { 
+      document.getElementById("d4").style.display='block';
+    } 
+
+    else {
+      document.getElementById("d4").style.display='none';
+      
+    if (dest == "Asia") { 
+      document.getElementById("d5").style.display='block';
+      document.getElementById("d6").style.display='block';
+    } 
+
+    else {
+      document.getElementById("d5").style.display='none'
+      document.getElementById("d6").style.display='none';
+    }
+  }
+
+}
+
+</script>
+
 </head>
 
-<body>
-
+<body onload="destChoose()">
   <!-- Top navigation -->
   <div class="topnav">
 
@@ -182,33 +273,10 @@
     document.getElementById("result").innerHTML = localStorage.getItem("listvalue");
 
   </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <meta charset="utf-8" />
-  <script>
+  
 
-    $('result').ready(function () {
-
-      $(".destination1, .destination2, .destination3, .destination4, .destination5, .destination6, .destination7, .destination8, .destination9, .destination10").hide();
-      if ($('#result').val() == "Canada") {
-        $("#d1").show();
-      } else if ($('#result').val() == "USA") {
-        $("#d9").show();
-      } else if ($('#result').val() == "Dominican Republic") {
-        $("#d3").show();
-      } else if ($('#result').val() == "Jamaica") {
-        $("#d4").show();
-      } else if ($('#result').val() == "Asia") {
-        $("#d4").show();
-      }
-
-    });
-
-  </script>
-
-
-
-  <div class="destination-container">
-    <div class="destination1" id="d1"><img class="destinationpic"
+  <div class="destination-container" id = "destinations">
+    <div class="destination" id="d1"><img class="destinationpic"
         src="https://www.marathoncoach.com/wp-content/uploads/2018/02/Banff-1140x642.jpg" width="500px" height="350px">
       <div class="top-left">
         <h3>Banff</h3>
@@ -220,7 +288,7 @@
         majestic Banff of Alberta, where you can experience all of nature’s wonderful and marvelous features
       </div>
     </div>
-    <div class="destination2" id="d2"><img class="destinationpic"
+    <div class="destination" id="d2"><img class="destinationpic"
         src="https://content.r9cdn.net/rimg/kimg/71/ef/f431b339-16489292bf8.jpg?width=568&height=350&crop=true&caller=HotelDetailsPhoto"
         width="500px" height="350px">
       <div class="top-left">
@@ -234,7 +302,7 @@
         chiseled mountain by victorious glacier towards heaven.
       </div>
     </div>
-    <div class="destination3"><img class="destinationpic"
+    <div class="destination" id="d3"><img class="destinationpic"
         src="https://www.worldtravelguide.net/wp-content/uploads/2018/06/shu-NorthAmerica-DominicanRepublic-CapCana-411057478-PretoPerola-1441x823px.jpg"
         width="500px" height="350px">
       <div class="top-left">
@@ -248,7 +316,7 @@
         waterfalls and exotic beaches. Rent a villa or stay at a all inclusive resort that fits your traveling style.
       </div>
     </div>
-    <div class="destination4"><img class="destinationpic"
+    <div class="destination" id="d4"><img class="destinationpic"
         src="https://travel.home.sndimg.com/content/dam/images/travel/fullset/2014/10/15/1b/dominican-republic-resorts-the-reserve-at-paradisus.rend.hgtvcom.616.347.suffix/1491584478418.jpeg"
         width="500px" height="350px">
       <div class="top-left">
@@ -263,7 +331,7 @@
       </div>
 
     </div>
-    <div class="destination5"><img class="destinationpic"
+    <div class="destination" id="d5"><img class="destinationpic"
         src="https://image.chitra.live/api/v1/wps/d25e76c/7c938097-26be-444a-9275-71edec4ce012/3/Bali-Indonesia-580x358.jpeg"
         width="500px" height="350px">
       <div class="top-left">
@@ -278,7 +346,7 @@
         relaxation. It has all the nessisties you need.
       </div>
     </div>
-    <div class="destination6"><img class="destinationpic"
+    <div class="destination" id="d6"><img class="destinationpic"
         src="https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/istock-629183422.jpg?itok=ICdK2p-o"
         width="500px" height="350px">
       <div class="top-left">
@@ -291,7 +359,7 @@
         Th modernize architecture to gorgeous mountain peaks. This will be a good time to visit.
       </div>
     </div>
-    <div class="destination7"><img class="destinationpic"
+    <div class="destination" id="d7"><img class="destinationpic"
         src="https://www.nationalgeographic.com/content/dam/environment/photos/Urban-Expeditions/London/02_london_i53138_18_06_28_10749-1-.adapt.1900.1.jpg"
         width="500px" height="350px">
       <div class="top-left">
@@ -306,7 +374,7 @@
         blended in the truffling forest.
       </div>
     </div>
-    <div class="destination8"><img class="destinationpic"
+    <div class="destination" id="d8"><img class="destinationpic"
         src="https://lp-cms-production.imgix.net/2019-06/55425108.jpg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4"
         width="500px" height="350px">
       <div class="top-left">
@@ -319,7 +387,7 @@
         With so many cultural influences, this would be the ideal spot to feel the breathtaking adventure
       </div>
     </div>
-    <div class="destination9"><img class="destinationpic"
+    <div class="destination" id="d9"><img class="destinationpic"
         src="https://content.fortune.com/wp-content/uploads/2018/05/california-economy-united-kingdom.jpg" width="500px"
         height="350px">
       <div class="top-left">
@@ -334,7 +402,7 @@
         created. You will find fantastic entertainment an array of food and pop culture.
       </div>
     </div>
-    <div class="destination10"><img class="destinationpic"
+    <div class="destination" id="d10"><img class="destinationpic"
         src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-1.2.1&w=1000&q=80" width="500px"
         height="350px">
       <div class="top-left">
@@ -352,6 +420,7 @@
 
   </div>
 
+ 
 
   <!--end of destination body-->
 
